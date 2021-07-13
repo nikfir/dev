@@ -20,3 +20,9 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/instructor/courses', \App\Http\Livewire\Instructor\Courses::class)
+    ->name('instructor-courses');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/instructor/course/create/{page}', \App\Http\Livewire\Instructor\Course\CreateWizard::class)
+    ->name('instructor-course-create');

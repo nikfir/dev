@@ -1,0 +1,4 @@
+<div {!! $attributes->merge(['class' => 'relative w-full h-16']) !!}>
+    <input class="rounded-lg border text-darkest dark:text-light bg-white dark:bg-darker border-lighter dark:border-darker hover:border-light dark:hover:border-dark focus:bg-lightest dark:focus:bg-darkest focus:border-lighter dark:focus:border-darker focus:ring-0 w-full h-full transition duration-300 shadow-none focus:shadow-md" type="text">
+    <div class="absolute top-0 text-darkest dark:text-light focused-sibling:text-dark dark:focused-sibling:text-primary font-semibold text-xs pl-3 pt-1 transition duration-300">{{ $label }}</div>
+</div>
